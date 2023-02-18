@@ -1,0 +1,97 @@
+@use "../abstracts/" as *;
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover .product__image {
+        background-blend-mode: multiply, normal;
+        border: 4px solid #ebcb80;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.188208);
+    }
+    &:hover .product__btn {
+        background: #EBCB80;
+        border: none;
+    }
+    .product__image {
+        width: 120px;
+        height: 120px;
+        border: 4px solid #e6e6e6;
+        border-radius: 50%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        img {
+            display: block;
+        }
+        @include md_device() {
+            width: 160px;
+            height: 160px;
+        }
+        @include lg_device() {
+            width: 262px;
+            height: 262px;
+        }
+    }
+    .product__title {
+        @include text-default();
+        font-size: 12px;
+        line-height: 24px;
+        color: #4b4b4b;
+        margin-top: 16px;
+        text-transform: uppercase;
+        @include md_device() {
+            margin-top: 23px;
+        }
+        @include lg_device() {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 29px;
+        }
+    }
+    .product__desc {
+        @include text-default();
+        font-size: 11px;
+        line-height: 16px;
+        color: #4b4b4b;
+        text-align: center;
+        @include lg_device() {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .p--block {
+        display: block;
+        width: 160px;
+        height: 32px;
+        @include lg_device() {
+            width: 262px;
+            height: 48px;
+        }
+    }
+
+    .product__btn {
+        width: 120px;
+        height: 32px;
+        border: 2px solid #4b4b4b;
+        border-radius: 50px;
+        background-color: transparent;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.0727273em;
+        color: #4b4b4b;
+        text-transform: uppercase;
+        margin-top: 20px;
+        @include md_device() {
+            height: 40px;
+        }
+        @include lg_device() {
+            width: 200px;
+            height: 48px;
+            margin-top: 31px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.0625em;
+        }
+    }
+}

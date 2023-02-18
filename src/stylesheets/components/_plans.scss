@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.plans {
+    background: #F6F6F6;
+    padding: 36px 15px 48px 15px;
+    @include md_device() {
+        padding: 56px 24px 74px 24px;
+    }
+    @include lg_device() {
+        padding-top: 68px;
+        padding-bottom: 116px;
+    }
+    .plans__list {
+        display: flex;
+        row-gap: 16;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 10;
+        margin: 0 auto;
+        margin-top: 20px;
+        align-items: start;
+        max-width: 320px;
+        @include md_device() {
+            max-width: 100%;
+            gap: 29;
+            margin-top: 31px;
+        }
+        @include lg_device() {
+            gap: 31;
+            margin-top: 76px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+.products {
+    padding: 29px 40px 56px 40px;
+    @include md_device() {
+        padding: 40px 24px 48px 14px;
+    }
+    @include lg_device() {
+        padding-top: 67px;
+        padding-bottom: 75px;
+    }
+    .products__title {
+        margin-bottom: 7px;
+        @include md_device() {
+            margin-bottom: 11px;
+        }
+    }
+    .products__description {
+        text-align: center;
+        @include md_device() {
+            display: block;
+            width: 555px;
+            margin: 0 auto;
+        }
+    }
+    .products__list {
+        margin-top: 20px;
+        gap: 32;
+        display: flex;
+        flex-direction: column;
+        @include md_device() {
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 38px; 
+            gap: 26;
+        }
+        @include lg_device() {
+            margin-top: 66px;
+            gap: 32;
+        }
+    }
+}

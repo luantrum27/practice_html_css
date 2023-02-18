@@ -1,0 +1,156 @@
+@use "../abstracts/" as *;
+.footer {
+    min-width: 320px;
+    padding-top: 28px;
+    padding-bottom: 46px;
+    background: #4b4b4b;
+    @include md_device() {
+        padding: 28px 24px 30px 24px;
+    }
+    @include lg_device() {
+        padding-top: 43px;
+        padding-bottom: 40px;
+    }
+    .footer-categories {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        column-gap: 35;
+        row-gap: 34;
+        width: 290px;
+        margin: 0 auto;
+        @include md_device() {
+            width: 728px;
+            gap: 47;
+        }
+        @include lg_device() {
+            width: 1140px;
+            gap: 30;
+        }
+    }
+    .footer-category {
+        width: 115px;
+        display: flex;
+        flex-direction: column;
+        gap: 12;
+        @include md_device() {
+            width: 140px;
+        }
+        @include lg_device() {
+            width: 262px;
+            gap: 18;
+        }
+        .footer-category__title {
+            @include text-default();
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.0666667em;
+            color: #ffffff;
+            text-transform: uppercase;
+            @include lg_device() {
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.0555556em;
+            }
+        }
+        .footer-category__line {
+            width: 115px;
+            height: 1px;
+            background: #7d7d7d;
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            @include md_device() {
+                width: 140px;
+            }
+            @include lg_device() {
+                width: 262px;
+            }
+        }
+        .categories {
+            display: flex;
+            flex-direction: column;
+            gap: 11;
+            @include md_device() {
+                gap: 6;
+            }
+            @include lg_device() {
+                gap: 12;
+            }
+            .categories__item {
+                a {
+                    @include text-default();
+                    font-size: 11px;
+                    line-height: 16px;
+                    color: #ffffff;
+                    @include lg_device() {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .footer__line {
+        width: 290px;
+        height: 1px;
+        background: #7d7d7d;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        margin: 0 auto;
+        margin-top: 34px;
+        margin-bottom: 23.75px;
+        @include md_device() {
+            width: 720px;
+            margin-top: 22.28px;
+            margin-bottom: 27.72px;
+        }
+        @include lg_device() {
+            width: 1140px;
+            margin-top: 43px;
+            margin-bottom: 28px;
+        }
+    }
+    .footer-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30;
+    }
+    .footer-copyright {
+        margin-top: 44px;
+        p {
+            @include text-default();
+            font-size: 11px;
+            line-height: 13px;
+            color: #ffffff;
+            text-align: center;
+            @include md_device() {
+                text-align: left;
+            }
+            @include lg_device() {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: left;
+            }
+        }
+        @include md_device() {
+            margin-top: 0;
+        }
+    }
+    .footer__final {
+        display: flex;
+        flex-direction: column;
+        @include md_device() {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 720px;
+            margin: 0 auto;
+        }
+        @include lg_device() {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 1140px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<section class="plans">
+    <h1 class="title title--md title--lg">Subscribing Plans</h1>
+    <ul class="plans__list">
+        <include
+            src="./components/plans__item.html"
+            locals='{
+                "type": "FREEMIUM",
+                "cost": "0",
+                "image": "../assets/images/card-header.png",
+                "details": "[`Basic Collections`, `10 Messages`, `50 Images per Day`]"
+            }'
+        ></include>
+        <include
+            src="./components/plans__item.html"
+            locals='{
+                "type": "START UP",
+                "cost": "9",
+                "image": "../assets/images/card-header (1).png",
+                "details": "[`Multiple Collections`, `100 Messages`, `100 Images per Day`]"
+            }'
+        ></include>
+        <include
+            src="./components/plans__item.html"
+            locals='{
+                "type": "BUSINESS",
+                "cost": "29",
+                "image": "../assets/images/card-header (2).png",
+                "details": "[`Unlimited Collections`, `500 Messages`, `300 Images per Day`, `Project Reviews`]"
+            }'
+        ></include>
+        <include
+            src="./components/plans__item.html"
+            locals='{
+                "type": "ENTERPRISE",
+                "cost": "49",
+                "image": "../assets/images/card-header (3).png",
+                "details": "[`Unlimited Collections`, `Unlimited Messages`, `Unlimited Images per Day`, `Project Reviews`]"
+            }'
+        ></include>
+    </ul>
+</section>

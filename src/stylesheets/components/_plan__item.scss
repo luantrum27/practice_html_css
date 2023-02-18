@@ -1,0 +1,145 @@
+@use "../abstracts/" as *;
+.plan {
+    width: 140px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding-bottom: 24px;
+    @include md_device() {
+        width: 158px;
+        height: 248px;
+    }
+    @include lg_device() {
+        width: 262px;
+        height: 372px;
+    }
+    &:hover {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    &:hover .plan__btn {
+        background: #ebcb80;
+        border: none;
+    }
+    .plan__img {
+        width: 140px;
+        height: 83.36px;
+        background-blend-mode: multiply, normal;
+        position: relative;
+        @include md_device() {
+            width: 158px;
+            height: 94.08px;
+        }
+        @include lg_device() {
+            width: 262px;
+            height: 156px;
+        }
+        .plan__desc {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 14px 5px 0 5px;
+            @include lg_device() {
+                padding-top: 40px;
+            }
+            .plan__type {
+                font-size: 12px;
+                line-height: 27px;
+                letter-spacing: 0.0555556em;
+                color: #ffffff;
+                @include text-default();
+                text-transform: uppercase;
+                @include lg_device() {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+            }
+            .plan__price {
+                display: flex;
+                justify-content: center;
+                gap: 5;
+                margin-left: -16px;
+                margin-top: -5px;
+                @include lg_device() {
+                    align-items: center;
+                    margin-top: -4px;
+                }
+                .plan__cost {
+                    @include text-default();
+                    font-size: 36px;
+                    line-height: 42px;
+                    color: #ffffff;
+                    display: block;
+                    @include lg_device() {
+                        font-size: 64px;
+                        line-height: 75px;
+                    }
+                }
+                .plan__unit {
+                    @include text-default();
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: 0.0416667em;
+                    color: #ffffff;
+                    display: block;
+                    margin-top: 7px;
+                    @include md_device() {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+    .plan-details {
+        margin-top: 21.64px;
+        margin-bottom: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 8;
+        height: 74px;
+        @include md_device() {
+            gap: 5;
+            margin-top: 15.92px;
+            margin-bottom: 8px;
+        }
+        @include lg_device() {
+            gap: 0;
+            margin-top: 17px;
+            margin-bottom: 25px;
+            height: 96px;
+        }
+        .plan-details__item {
+            @include text-default();
+            font-size: 11px;
+            color: #4b4b4b;
+            text-align: center;
+            @include lg_device() {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+    .plan__btn {
+        display: block;
+        width: 120px;
+        height: 32px;
+        border: 2px solid #4b4b4b;
+        border-radius: 50px;
+        outline: none;
+        @include text-default();
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.0625em;
+        color: #4b4b4b;
+        margin: 0 auto;
+        @include lg_device() {
+            border: none;
+            background-color: transparent;
+            width: 200px;
+            height: 48px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

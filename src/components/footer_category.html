@@ -1,0 +1,11 @@
+<li class="footer-category">
+    <h1 class="footer-category__title">{{ title }}</h1>
+    <div class="footer-category__line"></div>
+    <ul class="categories">
+        <each loop="category in {{ categories }}">
+            <li class="categories__item">
+                <a href="">{{ category }}</a>
+            </li>
+        </each>
+    </ul>
+</li>

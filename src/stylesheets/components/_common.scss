@@ -1,0 +1,67 @@
+@use "../abstracts/" as *;
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.title {
+    @include text-default();
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    color: #4b4b4b;
+    text-align: center;
+}
+
+.title--md {
+    @include md_device() {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+.title--lg {
+    @include lg_device() {
+        font-size: 44px;
+        line-height: 48px;
+        letter-spacing: -0.0363636em;
+    }
+}
+
+.description {
+    @include text-default();
+    font-size: 11px;
+    line-height: 16px;
+    color: #4b4b4b;
+}
+
+.description--lg {
+    @include lg_device() {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .dot {
+        width: 8px;
+        height: 8px;
+        border: 2px solid #4b4b4b;
+        border-radius: 7.5px;
+        box-sizing: border-box;
+    }
+    .dot--hidden {
+        display: block;
+        @include md_device() {
+            display: none;
+        }
+    }
+}

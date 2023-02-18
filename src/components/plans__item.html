@@ -1,0 +1,18 @@
+<li class="plan">
+    <figure class="plan__img">
+        <img src="{{ image }}" alt="card header">
+        <article class="plan__desc">
+            <p class="plan__type">{{ type }}</p>
+            <div class="plan__price">
+                <p class="plan__unit">$</p>
+                <p class="plan__cost">{{ cost }}</p>
+            </div>
+        </article>
+    </figure>
+    <article class="plan-details">
+        <each loop="detail in {{ details }}">
+            <p class="plan-details__item">{{ detail }}</p>
+        </each>
+    </article>
+    <button class="plan__btn">GET STARTED</button>
+</li>

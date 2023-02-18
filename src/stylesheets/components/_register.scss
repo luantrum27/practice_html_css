@@ -1,0 +1,87 @@
+@use "../abstracts/" as *;
+.register {
+    min-width: 240px;
+    padding: 61px 13px 80px 13px;
+    background: linear-gradient(184.39deg, rgba(255, 255, 255, 0.395947) 3.02%, rgba(255, 255, 255, 0.0001) 96.44%),
+        #ebcb80;
+    background-blend-mode: soft-light, normal;
+    display: flex;
+    flex-direction: column;
+    @include md_device() {
+        padding: 90px 0px 127px 0px;
+    }
+    .register__title {
+        margin-bottom: 7px;
+        @include md_device() {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.025em;
+            margin-bottom: 10px;
+        }
+        @include lg_device() {
+            font-size: 44px;
+            line-height: 48px;
+            letter-spacing: -0.0363636em;
+            margin-bottom: 23px;
+        }
+    }
+    .register__description {
+        text-align: center;
+        display: block;
+        width: 213px;
+        margin: 0 auto;
+        @include md_device() {
+            width: 286px;
+        }
+        @include lg_device() {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .register__input {
+        box-sizing: border-box;
+        width: 220px;
+        height: 36px;
+        background: #ffffff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        padding: 11px 14px;
+        @include text-default();
+        margin: 20px auto 44px auto;
+        @include md_device() {
+            margin: 37px auto 44px auto;
+        }
+        @include lg_device() {
+            width: 230px;
+            height: 45px;
+            padding: 13.5px 25px;
+            margin: 30px auto 52px auto;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+        }
+    }
+    .register__btn {
+        width: 220px;
+        height: 40px;
+        background: #4b4b4b;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        margin: 0 auto;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.0727273em;
+        color: #ffffff;
+        @include text-default();
+        text-transform: uppercase;
+        @include lg_device() {
+            width: 230px;
+            height: 48px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.0625em;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+.testimonials {
+    padding: 28px 40px 48px 40px;
+    @include md_device() {
+        padding: 40px 53px 48px 53px;
+    }
+    @include lg_device() {
+        padding: 64px 0 68px 0;
+    }
+    .testimonials__title {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.025em;
+    }
+    .testimonials-list {
+        margin-top: 28px;
+        display: flex;
+        align-items: start;
+        gap: 30;
+        @include md_device() {
+            margin-top: 32px;
+        }
+        @include lg_device() {
+            gap: 33;
+            margin-top: 76px;
+            justify-content: center;
+        }
+        
+    }
+    .testimonials-dot {
+        gap: 23;
+        margin-top: 72px;
+        @include sm_device() {
+            gap: 13;
+            margin-top: 60px;
+        }
+        @include md_device() {
+            margin-top: 32px;
+        }
+        @include lg_device() {
+            margin-top: 110px;
+        }
+        .dot--active {
+            background: #4b4b4b;
+        }
+    }
+}

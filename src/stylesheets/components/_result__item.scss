@@ -1,0 +1,138 @@
+@use "../abstracts/" as *;
+
+.circle {
+    width: 109px;
+    height: 109px;
+    position: relative;
+    margin: 0 auto;
+    @include lg_device() {
+        width: 204px;
+        height: 204px;
+    }
+}
+.circle__outer {
+    width: 110px;
+    height: 110px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    padding: 4px;
+    @include lg_device() {
+        width: 204px;
+        height: 204px;
+    }
+}
+
+.circle__inner {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include lg_device() {
+        width: 204px;
+        height: 204px;
+    }
+}
+
+.circle__number {
+    @include text-default();
+    font-size: 32px;
+    line-height: 22px;
+    letter-spacing: -0.025em;
+    color: #4b4b4b;
+    display: flex;
+    @include lg_device() {
+        font-size: 64px;
+        line-height: 42px;
+    }
+}
+
+.circle__number--small {
+    font-size: 14px;
+    margin-top: 7px;
+    @include lg_device() {
+        font-size: 32px;
+        line-height: 42px;
+        margin-top: 10px;
+    }
+}
+
+circle {
+    fill: none;
+    stroke: #ebcb80;
+    stroke-width: 5;
+    stroke-dasharray: 438;
+}
+
+.circle--1 {
+    stroke-dashoffset: 110;
+}
+
+.circle--2 {
+    stroke-dashoffset: 264;
+}
+
+.circle--3 {
+    stroke-dashoffset: 82.563;
+}
+
+#circle__svg {
+    display: block;
+    transform-origin: left top;
+    transform: scale(0.75);
+    position: absolute;
+    top: -5;
+    left: -5;
+    @include lg_device() {
+        transform: scale(1.4);
+        position: absolute;
+        top: -10;
+        left: -10;
+    }
+}
+
+.result-item__content {
+    width: 139.73px;
+    margin: 0 auto;
+    margin-top: 16px;
+    @include md_device() {
+        margin-top: 15.52px;
+    }
+    @include lg_device() {
+        width: 262px;
+        margin-top: 27.7px;
+    }
+}
+
+.resutl-item__title {
+    @include text-default();
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.0666667em;
+    color: #4b4b4b;
+    text-align: center;
+    margin-bottom: 4px;
+    @include md_device() {
+        margin-bottom: 8px;
+    }
+    @include lg_device() {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.0555556em;
+        margin-bottom: 20px;
+    }
+}
+
+.result-item__desc {
+    @include text-default();
+    font-size: 11px;
+    line-height: 16px;
+    color: #4b4b4b;
+    text-align: center;
+    @include lg_device() {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

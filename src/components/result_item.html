@@ -1,0 +1,22 @@
+<li class="result-item">
+    <div class="circle {{ circle }}">
+        <div class="circle__outer">
+            <div class="circle__inner">
+                <span class="circle__number">
+                    {{ partInt }}<p class="circle__number--small">,{{ partDecimal }}</p>
+                </span>
+            </div>
+        </div>
+        <svg id="circle__svg" xmlns="http://www.w3.org/2000/svg" version="1.1"
+            width="160px" height="160px">
+    
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            </svg>
+    </div>
+    <article class="result-item__content">
+        <h1 class="resutl-item__title uppercase">{{ title }}</h1>
+        <p class="result-item__desc">
+            {{ description }}
+        </p>
+    </article>
+</li>

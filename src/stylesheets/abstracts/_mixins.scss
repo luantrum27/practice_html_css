@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+// Media-Query Mixin
+
+@mixin sm_device {
+    @media (min-width: $small_device) {
+        @content;
+    }
+}
+@mixin md_device {
+    @media (min-width: $medium_device) {
+        @content;
+    }
+}
+@mixin lg_device {
+    @media (min-width: $large_device) {
+        @content;
+    }
+}
+@mixin xl_device {
+    @media (min-width: $extra_large_device) {
+        @content;
+    }
+}
+@mixin double_extra_device {
+    @media (min-width: $double_extra_large_device) {
+        @content;
+    }
+}
+
+// Background image
+
+@mixin bg-img($bg: "") {
+    background-image: url($bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin text-default() {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+}

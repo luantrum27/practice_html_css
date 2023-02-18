@@ -1,0 +1,181 @@
+@use "../abstracts/" as *;
+.contact {
+    min-width: 320px;
+    @include bg-img("../assets/images/background_contact.png");
+    padding-top: 61.51px;
+    padding-bottom: 25.66px;
+    @include md_device() {
+        padding-top: 66.51px;
+        padding-bottom: 50px;
+    }
+    @include lg_device() {
+        padding-top: 68px;
+        padding-bottom: 50px;
+    }
+    .contact__title {
+        @include text-default();
+        font-size: 31.2889px;
+        line-height: 40px;
+        letter-spacing: -0.0255682em;
+        color: #ffffff;
+        text-align: center;
+        @include lg_device() {
+            font-size: 44px;
+            line-height: 48px;
+            letter-spacing: -0.0363636em;
+        }
+    }
+    .contact-form {
+        position: relative;
+        width: 290px;
+        padding-top: 34.4px;
+        padding-bottom: 36.14px;
+        background: #4b4b4b;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 38.81px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 23.79;
+        @include md_device() {
+            margin-top: 47.97px;
+        }
+        @include lg_device() {
+            width: 360px;
+            margin-top: 52px;
+            padding-top: 48px;
+            padding-bottom: 24px;
+            gap: 33;
+        }
+        .contact-form__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(224.09deg, rgba(255, 255, 255, 0.7) 5.13%, rgba(255, 255, 255, 7e-5) 90.88%);
+            background-blend-mode: soft-light;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+        .contact-form__input {
+            width: 220px;
+            height: 35.21px;
+            background: #ffffff;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+            border: 1px solid #999999;
+            border-radius: 4px;
+            padding-top: 12px;
+            padding-bottom: 9.52px;
+            padding-left: 14px;
+            font-size: 10.7556px;
+            line-height: 13px;
+            letter-spacing: 0.0102273em;
+            @include text-default();
+            color: #4b4b4b;
+            @include lg_device() {
+                width: 256px;
+                height: 36px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 15.02px;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.01em;
+            }
+        }
+        .contact-form__text-area {
+            height: 91.94px;
+        }
+        .contact-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8;
+            .contact-option__input {
+                width: 18px;
+                height: 18px;
+            }
+            .contact-option__input:checked + .contact-option__icon {
+                display: block;
+            }
+            .contact-option__input:checked {
+                display: none;
+            }
+            img {
+                display: none;
+                width: 18px;
+                height: 18px;
+            }
+            label {
+                @include text-default();
+                font-size: 10.7556px;
+                line-height: 24px;
+                color: #ffffff;
+                @include lg_device() {
+                    font-size: 16px;
+                }
+            }
+        }
+        .contact__button {
+            @include text-default();
+            background: #ebcb80;
+            border-radius: 50px;
+            width: 140px;
+            height: 40px;
+            font-size: 11px;
+            line-height: 13px;
+            letter-spacing: 0.0727273em;
+            color: #4b4b4b;
+            outline: none;
+            border: none;
+            padding: 13px;
+            margin-top: -15px;
+            @include lg_device() {
+                width: 198px;
+                height: 48px;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.0625em;
+            }
+        }
+    }
+    .contact-information {
+        width: 253.8px;
+        margin: 0 auto;
+        margin-top: 30px;
+        @include md_device() {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 50;
+            margin-top: 63.7px;
+        }
+        .contact-information__item {
+            display: flex;
+            align-items: center;
+            gap: 11.38;
+            .contact-information__content {
+                @include text-default();
+                font-size: 10.7556px;
+                line-height: 30px;
+                color: #ffffff;
+                @include lg_device() {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+            .contact-information__icon {
+                width: 20px;
+                svg {
+                    width: 17px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
