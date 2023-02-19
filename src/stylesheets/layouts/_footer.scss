@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 .footer {
-    min-width: 320px;
+    min-width: 280px;
     padding-top: 28px;
     padding-bottom: 46px;
     background: #4b4b4b;
@@ -19,6 +19,12 @@
         row-gap: 34;
         width: 290px;
         margin: 0 auto;
+        @include sm_device() {
+            width: 280px;
+            gap: 15px;
+            justify-content: center;
+        }
+        
         @include md_device() {
             width: 728px;
             gap: 47;
@@ -97,6 +103,9 @@
         margin: 0 auto;
         margin-top: 34px;
         margin-bottom: 23.75px;
+        @include sm_device() {
+            width: 240px;
+        }
         @include md_device() {
             width: 720px;
             margin-top: 22.28px;

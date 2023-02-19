@@ -2,7 +2,7 @@
 
 .feedback {
     @include bg-img("../assets/images/background.png");
-    min-width: 320px;
+    min-width: 280px;
     padding: 28px 15px 36px 15px;
     position: relative;
     @include md_device() {

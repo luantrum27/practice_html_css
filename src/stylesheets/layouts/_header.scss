@@ -4,6 +4,9 @@
     @include bg-img("../assets/icons/Background.png");
     min-height: 425px;
     padding: 44px 42px 27px 40px;
+    @include sm_device() {
+        padding: 20px 10px;
+    }
     @include md_device() {
         padding-top: 75px;
         padding-bottom: 0;

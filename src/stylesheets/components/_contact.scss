@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 .contact {
-    min-width: 320px;
+    min-width: 280px;
     @include bg-img("../assets/images/background_contact.png");
     padding-top: 61.51px;
     padding-bottom: 25.66px;
@@ -39,6 +39,9 @@
         flex-direction: column;
         align-items: center;
         gap: 23.79;
+        @include sm_device() {
+            width: 247px;
+        }
         @include md_device() {
             margin-top: 47.97px;
         }

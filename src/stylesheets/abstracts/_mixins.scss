@@ -3,7 +3,7 @@
 // Media-Query Mixin
 
 @mixin sm_device {
-    @media (min-width: $small_device) {
+    @media (min-width: $small_device) and (max-width: 320px) {
         @content;
     }
 }

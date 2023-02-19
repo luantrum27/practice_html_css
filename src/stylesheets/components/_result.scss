@@ -22,6 +22,11 @@
     }
     .result__description {
         text-align: center;
+        @include sm_device() {
+            display: block;
+            margin: 0 auto;
+            width: 240px;
+        }
     }
     .result__list {
         display: flex;
@@ -29,6 +34,10 @@
         flex-direction: column;
         gap: 28;
         margin-top: 37.4px;
+        @include sm_device() {
+            max-width: 260px;
+            margin: 37.4px auto 0 auto;
+        }
         @include lg_device() {
             padding: 0 5px;
         }
