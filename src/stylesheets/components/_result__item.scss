@@ -64,18 +64,45 @@ circle {
     stroke: #ebcb80;
     stroke-width: 5;
     stroke-dasharray: 438;
+    stroke-dashoffset: 438;
+    animation: anim__1 2s linear forwards;
+}
+
+@keyframes anim__1 {
+    100% {
+        stroke-dashoffset: 110;
+    }
+}
+@keyframes anim__2 {
+    100% {
+        stroke-dashoffset: 264;
+    }
+}
+@keyframes anim__3 {
+    100% {
+        stroke-dashoffset: 82.563;
+    }
 }
 
 .circle--1 {
     stroke-dashoffset: 110;
+    circle {
+        animation: anim__1 2s linear forwards;
+    }
 }
 
 .circle--2 {
     stroke-dashoffset: 264;
+    circle {
+        animation: anim__2 2s linear forwards;
+    }
 }
 
 .circle--3 {
     stroke-dashoffset: 82.563;
+    circle {
+        animation: anim__3 2s linear forwards;
+    }
 }
 
 #circle__svg {
