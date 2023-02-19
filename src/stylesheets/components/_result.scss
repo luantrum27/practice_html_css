@@ -3,6 +3,7 @@
     padding-top: 25px;
     padding-bottom: 32px;
     flex-shrink: 0;
+    overflow: hidden;
     @include md_device() {
         padding-top: 34px;
         padding-bottom: 48px;

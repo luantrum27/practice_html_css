@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 .products {
     padding: 29px 40px 56px 40px;
+    overflow: hidden;
     @include md_device() {
         padding: 40px 24px 48px 14px;
     }

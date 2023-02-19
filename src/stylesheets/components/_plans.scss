@@ -3,6 +3,7 @@
 .plans {
     background: #F6F6F6;
     padding: 36px 15px 48px 15px;
+    overflow: hidden;
     @include md_device() {
         padding: 56px 24px 74px 24px;
     }
