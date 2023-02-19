@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "parcel src/pages/*.html",
-    "build": "parcel src/pages/*.html"
+    "start": "parcel src/pages/index.html",
+    "build": "parcel build src/pages/index.html"
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.8.3",
