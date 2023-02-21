@@ -12,11 +12,10 @@
         padding-left: 86px;
         padding-right: 103px;
         min-width: 768px;
-        min-height: 410px;
+        position: relative;
     }
     @include lg_device() {
         min-width: 1024px;
-        min-height: 410px;
         padding: 0;
         padding-top: 75px;
     }
@@ -27,6 +26,10 @@
             display: flex;
             justify-content: space-between;
             gap: 75;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
         @include lg_device() {
             margin-top: 42px;
