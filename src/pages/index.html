@@ -8,8 +8,7 @@
         <link rel="stylesheet" href="../stylesheets/main.scss">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="../assets/js/scroll_to_section.js"></script>
-        
+        <!-- <script src="../assets/js/scroll_to_section.js"></script> -->
     </head>
     <body>
         <!-- header -->
@@ -20,10 +19,30 @@
 
         <!-- footer -->
         <include src="./layouts/footer.html"></include>
-       
-        <script>
-            AOS.init();    
-        </script>
+        
     </body>
-    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+    integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+<script>
+    AOS.init();   
+    $(document).ready(function () {
+        $.scrollify({
+            section: '.scroll',
+            sectionName: 'section-name',
+            easing: 'easeOutExpo',
+            scrollSpeed: 1100,
+            offset: 0,
+            scrollbars: true,
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll: true,
+        });
+    })
+</script>
 </html>

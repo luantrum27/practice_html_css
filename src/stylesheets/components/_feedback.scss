@@ -36,6 +36,7 @@
         .feedback__btn {
             background-color: transparent;
             display: none;
+            cursor: pointer;
             @include md_device() {
                 display: block;
             }
