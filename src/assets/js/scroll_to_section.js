@@ -27,6 +27,7 @@ function MouseWheelHandler(e) {
         i = section.length - 1;
     } else if (i < 0) {
         i = 0;
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }
 }
 
