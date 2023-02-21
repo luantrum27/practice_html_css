@@ -4,6 +4,7 @@
     padding-top: 28px;
     padding-bottom: 46px;
     background: #4b4b4b;
+    min-height: 100vh;
     @include md_device() {
         padding: 28px 24px 30px 24px;
     }

@@ -11,6 +11,10 @@
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.025em;
+        @include sm_device() {
+            display: block;
+            margin-top: 50%;
+        }
     }
     .testimonials-list {
         margin-top: 28px;

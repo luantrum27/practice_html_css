@@ -2,7 +2,6 @@
 .header {
     min-width: 280px;
     @include bg-img("../assets/icons/Background.png");
-    min-height: 425px;
     padding: 44px 42px 27px 40px;
     @include sm_device() {
         padding: 20px 10px;
@@ -23,6 +22,12 @@
     }
     .header__container {
         box-sizing: border-box;
+        @include sm_device() {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         @include md_device() {
             display: flex;
             justify-content: space-between;

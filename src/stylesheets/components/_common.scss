@@ -16,6 +16,7 @@
     letter-spacing: -0.025em;
     color: #4b4b4b;
     text-align: center;
+    
 }
 
 .title--md {
@@ -31,6 +32,11 @@
         line-height: 48px;
         letter-spacing: -0.0363636em;
     }
+}
+
+.section {
+    min-height: 100vh;
+    scroll-snap-align: start;
 }
 
 .description {
@@ -65,3 +71,5 @@
         }
     }
 }
+
+

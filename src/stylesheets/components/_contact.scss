@@ -4,6 +4,7 @@
     @include bg-img("../assets/images/background_contact.png");
     padding-top: 61.51px;
     padding-bottom: 25.66px;
+    min-height: 100vh;
     @include md_device() {
         padding-top: 66.51px;
         padding-bottom: 50px;
