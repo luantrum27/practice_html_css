@@ -22,12 +22,7 @@
     }
     .header__container {
         box-sizing: border-box;
-        @include sm_device() {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+       
         @include md_device() {
             display: flex;
             justify-content: space-between;
