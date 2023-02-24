@@ -63,12 +63,17 @@
         border: 2px solid #4b4b4b;
         border-radius: 7.5px;
         box-sizing: border-box;
+        transition: all 0.15s ease;
+        cursor: pointer;
     }
     .dot--hidden {
         display: block;
         @include md_device() {
             display: none;
         }
+    }
+    .dot--active {
+        background: #4b4b4b;
     }
 }
 

@@ -6,17 +6,25 @@
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     position: relative;
-    margin: 0 auto;
-   
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    @include sm_device() {
+        width: 240px;
+        height: 280px;
+        flex-shrink: 0;
+    }
+
     @include md_device() {
         width: 316px;
         height: 280px;
+        flex-shrink: 0;
     }
 
     @include lg_device() {
         width: 554px;
         height: 348px;
         margin: 0;
+        flex-shrink: 0;
     }
     .testimonials-item__avatar {
         position: absolute;

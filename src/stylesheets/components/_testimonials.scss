@@ -1,6 +1,9 @@
 @use "../abstracts/" as *;
 .testimonials {
     padding: 28px 40px 48px 40px;
+    @include sm_device() {
+        padding: 28px 0 0 0;
+    }
     @include md_device() {
         padding: 40px 53px 48px 53px;
     }
@@ -16,24 +19,55 @@
             margin-top: 50%;
         }
     }
-    .testimonials-list {
+    .testimonials-wrapper {
+        overflow: hidden;
+        margin: 0 auto;
         margin-top: 28px;
-        display: flex;
-        align-items: start;
-        gap: 30;
+        @include sm_device() {
+            width: 240px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            margin: 0 auto;
+            margin-top: 28px;
+        }
         @include md_device() {
-            margin-top: 32px;
+            margin-top: 64px;
         }
         @include lg_device() {
-            gap: 33;
             margin-top: 76px;
-            justify-content: center;
         }
-        
+        .testimonials-list {
+            display: flex;
+            align-items: start;
+            transition: all 0.5s ease;
+            .testimonials-list__item {
+                display: flex;
+                @include md_device() {
+                    gap: 30;
+                }
+                @include lg_device() {
+                    gap: 33;
+                }
+            }
+            @include sm_device() {
+                display: flex;
+            }
+            @include md_device() {
+                display: flex;
+            }
+            @include lg_device() {
+                display: flex;
+                
+            }
+        }
     }
     .testimonials-dot {
         gap: 23;
+        
         margin-top: 72px;
+        input {
+            margin: 0;
+        }
         @include sm_device() {
             gap: 13;
             margin-top: 60px;
@@ -44,8 +78,26 @@
         @include lg_device() {
             margin-top: 110px;
         }
-        .dot--active {
-            background: #4b4b4b;
-        }
     }
 }
+
+#card1:checked ~ .dot--1 {
+    background: #4b4b4b;
+}
+
+#card2:checked + .dot--2 {
+    background: #4b4b4b;
+}
+
+#card3:checked + .dot--3 {
+    background: #4b4b4b;
+}
+
+#card4:checked + .dot--4 {
+    background: #4b4b4b;
+}
+
+#card5:checked + .dot--5 {
+    background: #4b4b4b;
+}
+

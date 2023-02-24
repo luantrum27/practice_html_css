@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../stylesheets/main.scss">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
         <!-- header -->
@@ -19,6 +20,7 @@
         <!-- footer -->
         <include src="./layouts/footer.html"></include>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
             integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
@@ -40,6 +42,10 @@
                     touchScroll: true,
                 });
             });
+
+            const testimonialsList = document.querySelector('.testimonials-list');
+            const testimonialWrapper = document.querySelector('.testimonials-wrapper');
+            const testimonialItem = document.querySelectorAll('.testimonials-list__item');
             const feedbackBtn = document.querySelectorAll(".feedback__btn");
             const btnNext = feedbackBtn[1];
             const btnPrev = feedbackBtn[0];
@@ -47,19 +53,28 @@
             const feedbackWrapper = document.querySelector('.feedback-wrapper');
             const sliderItems = document.querySelectorAll('.feedback-content__item ');
             const sliderItemWidth = document.querySelectorAll('.feedback-content__item ')[0].offsetWidth;
+            const testimonialAvatar = document.querySelectorAll('.testimonials-item__avatar');
+            const dots = document.querySelectorAll('.dot');
             feedbackWrapper.style.width = `${sliderItemWidth}px`;
-            let index = 0
+            testimonialWrapper.style.width = `${testimonialItem[1].offsetWidth}px`;
+            testimonialWrapper.style.height = `${testimonialItem[1].offsetHeight + testimonialAvatar[1].offsetHeight / 2}px`;
+            testimonialsList.style.width  = `${testimonialItem.length * testimonialItem[1].offsetWidth}px`;
+            let index = 0;
             btnPrev.addEventListener('click', () => {
                 index++;
                if (index >= 0) index = 0; 
                 feedbackList.style.left = `${index * sliderItemWidth}px`;
-                console.log('sliderItemWidth: ', sliderItemWidth);
             })
             btnNext.addEventListener('click', () => {
                 index--;
                 if (index <= -(sliderItems.length)) index = -(sliderItems.length) + 1;
                 feedbackList.style.left = `${index * sliderItemWidth}px`;
-                console.log('sliderItemWidth: ', sliderItemWidth);
+            })
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    testimonialsList.style.marginLeft = `-${index * 100}%`;
+                    
+                })
             })
         </script>
     </body>

@@ -1,31 +1,130 @@
 <section class="section testimonials scroll s-six" data-section-name="s-six">
     <h1 class="title testimonials__title">Testimonials</h1>
-    <ul class="testimonials-list">
-        <include
-            src="./components/testimonials_item.html"
-            locals='{
-            "name": "Seneca the Younger",
-            "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
-            "job": "Editor in okodesign.net",
-            "avatar": "../assets/images/person (2).png",
-            "theme": "light"
-            }'></include>
-        <include
-            src="./components/testimonials_item.html"
-            locals='{
-            "name": "Rachel Moreno",
-            "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
-            "job": "Lead Designer in okodesign.net",
-            "avatar": "../assets/images/person(1).png",
-            "theme": "mg--top"
-            }'></include>
-    </ul>
-    <ul class="dots testimonials-dot">
-        <li class="dot dot--hidden"></li>
-        <li class="dot dot--active"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-        <li class="dot dot--hidden"></li>
-    </ul>
+    <div class="testimonials-wrapper">
+        <ul class="testimonials-list">
+            <li class="testimonials-list__item">
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Seneca the Younger",
+                "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+                "job": "Editor in okodesign.net",
+                "avatar": "../assets/images/person (2).png",
+                "theme": "light",
+                "id": "item1"
+                }'></include>
+            <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Rachel Moreno",
+                "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
+                "job": "Lead Designer in okodesign.net",
+                "avatar": "../assets/images/person(1).png",
+                "theme": "mg--top",
+                "id": "item2"
+                }'></include>
+            </li>
+            <li class="testimonials-list__item">
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Seneca the Younger",
+                "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+                "job": "Editor in okodesign.net",
+                "avatar": "../assets/images/person (2).png",
+                "theme": "light",
+                "id": "item1"
+                }'></include>
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Rachel Moreno",
+                "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
+                "job": "Lead Designer in okodesign.net",
+                "avatar": "../assets/images/person(1).png",
+                "theme": "mg--top",
+                "id": "item3"
+                }'></include>
+            </li>
+            <li class="testimonials-list__item">
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Seneca the Younger",
+                "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+                "job": "Editor in okodesign.net",
+                "avatar": "../assets/images/person (2).png",
+                "theme": "light",
+                "id": "item1"
+                }'></include>
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Rachel Moreno",
+                "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
+                "job": "Lead Designer in okodesign.net",
+                "avatar": "../assets/images/person(1).png",
+                "theme": "mg--top",
+                "id": "item3"
+                }'></include>
+            </li>
+            <li class="testimonials-list__item">
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Seneca the Younger",
+                "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+                "job": "Editor in okodesign.net",
+                "avatar": "../assets/images/person (2).png",
+                "theme": "light",
+                "id": "item1"
+                }'></include>
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Rachel Moreno",
+                "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
+                "job": "Lead Designer in okodesign.net",
+                "avatar": "../assets/images/person(1).png",
+                "theme": "mg--top",
+                "id": "item3"
+                }'></include>
+            </li>
+            <li class="testimonials-list__item">
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Seneca the Younger",
+                "description": "It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.",
+                "job": "Editor in okodesign.net",
+                "avatar": "../assets/images/person (2).png",
+                "theme": "light",
+                "id": "item1"
+                }'></include>
+                <include
+                src="./components/testimonials_item.html"
+                locals='{
+                "name": "Rachel Moreno",
+                "description": "Attending a trade show can be a very effective method of promoting your company and its products.",
+                "job": "Lead Designer in okodesign.net",
+                "avatar": "../assets/images/person(1).png",
+                "theme": "mg--top",
+                "id": "item3"
+                }'></include>
+            </li>
+        </ul>
+    </div>
+    <div class="dots testimonials-dot">
+        <input type="radio" name="testimonial-slide__item" id="card1" hidden>
+        <label class="dot dot--hidden dot--1" for="card1"></label>
+        <input type="radio" name="testimonial-slide__item" id="card2" hidden>
+        <label class="dot dot--2" for="card2"></label>
+        <input type="radio" name="testimonial-slide__item" id="card3" hidden>
+        <label class="dot dot--3" for="card3"></label>
+        <input type="radio" name="testimonial-slide__item" id="card4" hidden>
+        <label class="dot dot--4" for="card4"></label>
+        <input type="radio" name="testimonial-slide__item" id="card5" hidden>
+        <label class="dot dot--hidden dot--5" for="card5"></label>
+    </div>
+   
 </section>
-
