@@ -47,6 +47,7 @@
                 }
                 @include lg_device() {
                     gap: 33;
+                    padding: 0 30px;
                 }
             }
             @include sm_device() {
