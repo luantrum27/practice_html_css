@@ -2,34 +2,28 @@
 .header {
     min-width: 280px;
     @include bg-img("../assets/icons/Background.png");
+    min-height: 425px;
     padding: 44px 42px 27px 40px;
-    @include sm_device() {
-        padding: 20px 10px;
-    }
     @include md_device() {
         padding-top: 75px;
         padding-bottom: 0;
         padding-left: 86px;
         padding-right: 103px;
         min-width: 768px;
-        position: relative;
+        min-height: 410px;
     }
     @include lg_device() {
         min-width: 1024px;
+        min-height: 410px;
         padding: 0;
         padding-top: 75px;
     }
     .header__container {
         box-sizing: border-box;
-       
         @include md_device() {
             display: flex;
             justify-content: space-between;
             gap: 75;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
         }
         @include lg_device() {
             margin-top: 42px;

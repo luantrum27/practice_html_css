@@ -34,11 +34,6 @@
     }
 }
 
-.section {
-    min-height: 100vh;
-    scroll-snap-align: start;
-}
-
 .description {
     @include text-default();
     font-size: 11px;

@@ -12,24 +12,20 @@
     }
     .register__title {
         margin-bottom: 7px;
-        margin-top: 20%;
         @include sm_device() {
             display: block;
-            margin-top: 50%;
         }
         @include md_device() {
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.025em;
             margin-bottom: 10px;
-            margin-top: 0;
         }
         @include lg_device() {
             font-size: 44px;
             line-height: 48px;
             letter-spacing: -0.0363636em;
             margin-bottom: 23px;
-            margin-top: 0;
         }
     }
     .register__description {
